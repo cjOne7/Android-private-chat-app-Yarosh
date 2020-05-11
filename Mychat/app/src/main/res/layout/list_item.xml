@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/messageUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="3sp"
+
+        android:layout_marginLeft="3sp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+            android:id="@+id/messageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="3sp"
+            android:layout_marginRight="3sp"
+            tools:ignore="RelativeOverlap" />
+
+    <com.github.library.bubbleview.BubbleTextView
+            android:id="@+id/messageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/messageUser"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dp"
+            android:padding="10dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:angle="12dp"
+            app:arrowCenter="false"
+            app:arrowHeight="12dp"
+            app:arrowLocation="left"
+            app:arrowPosition="23dp"
+            app:arrowWidth="8dp"
+            app:bubbleColor="#7EC0EE"
+
+            />
+
+</RelativeLayout>

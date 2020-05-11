@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <ImageView
+            android:id="@+id/emoji_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="5sp"
+            android:layout_marginRight="5sp"
+            android:layout_marginBottom="5sp"
+            android:padding="4dp"
+            android:src="@mipmap/smiley"
+
+            />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="5sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginBottom="5sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_send_btn"
+            app:backgroundTint="#BFC3D1"
+            app:fabSize="mini" />
+
+
+    <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
+            android:id="@+id/messageField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/btnSend"
+            android:layout_toLeftOf="@+id/btnSend"
+            android:layout_toEndOf="@+id/emoji_btn"
+            android:layout_toRightOf="@+id/emoji_btn"
+            android:hint="@string/enter_text_here"
+            android:textColorHint="#A3D1C8C8"
+            app:emojiconSize="25dp" />
+
+    <ListView
+            android:id="@+id/listOfMessages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/messageField"
+            android:layout_alignParentTop="true"
+            android:layout_margin="7dp"
+            android:background="#F4EDED"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10dp"
+            android:stackFromBottom="true"
+            android:transcriptMode="alwaysScroll" />
+</RelativeLayout>
